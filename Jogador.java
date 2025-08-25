@@ -1,18 +1,16 @@
-Class Jogador extends Pessoa{
+public class Jogador extends Pessoa{
 
 private String posicao;
 private float altura;
 private float peso;
 private boolean lesionado;
-private float imc;
 
-public Jogador(String Nome, String Idade, float Salario, String Posicao, float Altura, float Peso, boolean Lesionado){
+public Jogador(String Nome, int Idade, float Salario, String Posicao, float Altura, float Peso, boolean Lesionado){
 super(Nome, Idade, Salario);
 posicao = Posicao;
 altura = Altura;
 peso = Peso;
 lesionado = Lesionado;
-imc =  peso / (altura * altura) 
 }
 
 
@@ -70,7 +68,7 @@ lesionado = Lesionado;
 
 public float get_imc(){
 
-return imc;
+return peso / (altura * altura);
 
 }
 
